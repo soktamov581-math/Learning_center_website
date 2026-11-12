@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bright Steps Learning Center – English, Math and Python for kids and teens (demo)</title>
+<meta name="description" content="Small-group courses in English, Math and Python for ages 7–17 in Tashkent. See courses, teachers, the weekly schedule and book a free trial lesson.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F6FB; --surface:#FFFFFF; --ink:#15153A; --muted:#55557A; --line:#DCDCEC; --grid:#E6E6F2;
+  --indigo:#2B2A87; --on-indigo:#FFFFFF; --yellow:#FFD84D; --mint:#BDEBD7; --pink:#FFC9DA; --sky:#C9DDFF;
+  --display:"Lexend","Trebuchet MS",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E0E26; --surface:#17173B; --ink:#EDEDFA; --muted:#A9A9CF; --line:#2A2A57; --grid:#16163A;
+        --indigo:#5A58E0; --yellow:#E8C23F; --mint:#2F5B4B; --pink:#6A3A50; --sky:#2F4A7A}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;padding-top:env(safe-area-inset-top,0px);scroll-padding-top:16px}
+body{background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 var(--body);padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:700;margin-bottom:10px}
+h3{font-size:1.2rem;font-weight:600}
+.lead{color:var(--muted);max-width:58ch;margin-bottom:28px}
+section{padding:68px 0 4px}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-family:var(--display);font-weight:700;font-size:1.15rem;text-decoration:none}
+header nav{display:flex;gap:22px}
+header nav a{text-decoration:none;color:var(--muted);font-weight:700;font-size:1rem}
+header nav a:hover{color:var(--ink)}
+@media(max-width:640px){header nav{display:none}}
+
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font:700 1.02rem var(--body);text-decoration:none;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--indigo);border-color:var(--indigo);color:var(--on-indigo)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}html{scroll-behavior:auto}}
+
+/* hero on graph paper */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:48px 28px;border-radius:28px;border:1px solid var(--line);
+  background:
+   linear-gradient(var(--grid) 1px,transparent 1px) 0 0/28px 28px,
+   linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/28px 28px,var(--surface)}
+.hero h1{font-size:clamp(2.2rem,6vw,3.7rem);font-weight:700}
+.hero p{margin-top:18px;color:var(--muted);max-width:44ch;font-size:1.2rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding:36px 22px}}
+.report{background:var(--yellow);color:#15153A;border-radius:6px;padding:22px 22px 18px;transform:rotate(1.6deg);box-shadow:0 18px 40px -22px rgba(21,21,58,.55);max-width:340px;justify-self:center;width:100%}
+.report h3{font-size:1.05rem;margin-bottom:2px}
+.report small{display:block;margin-bottom:14px;opacity:.75}
+.rep-row{display:flex;justify-content:space-between;font-weight:700;font-size:.98rem;margin-top:10px}
+.rep-bar{height:9px;border-radius:9px;background:rgba(21,21,58,.18);margin-top:5px;overflow:hidden}
+.rep-bar i{display:block;height:100%;background:#15153A;border-radius:9px}
+.report p{font-size:.95rem;margin-top:14px;color:#15153A}
+
+/* courses */
+.courses{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.courses{grid-template-columns:1fr}}
+.course{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column}
+.course .top{display:inline-block;align-self:flex-start;border-radius:99px;padding:3px 14px;font-weight:700;font-size:.92rem;margin-bottom:14px;color:#15153A}
+.c1 .top{background:var(--pink)}.c2 .top{background:var(--sky)}.c3 .top{background:var(--mint)}.c4 .top{background:var(--yellow)}
+.course p{color:var(--muted);margin:8px 0 14px}
+.facts{list-style:none;padding:0;margin-bottom:18px;display:grid;gap:4px;font-size:1rem}
+.facts li::before{content:"✓ ";font-weight:700;color:var(--indigo)}
+.course .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:700;font-size:1.15rem}
+.price small{font:400 .9rem var(--body);color:var(--muted)}
+
+/* teachers */
+.teachers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:820px){.teachers{grid-template-columns:1fr}}
+.teacher{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px}
+.av{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font:700 1.2rem var(--display);color:#15153A}
+.teacher p{color:var(--muted);font-size:1rem;margin-top:4px}
+
+/* schedule */
+.tt-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:22px;background:var(--surface)}
+table.tt{width:100%;min-width:640px;border-collapse:collapse;text-align:center}
+.tt th,.tt td{padding:14px 8px;border-bottom:1px solid var(--line)}
+.tt tr:last-child td{border-bottom:0}
+.tt th{font:600 .98rem var(--display);color:var(--muted)}
+.tt th:first-child,.tt td:first-child{text-align:left;padding-left:20px;font-weight:700;white-space:nowrap}
+.chip{display:inline-block;border-radius:10px;padding:4px 10px;font-weight:700;font-size:.9rem;color:#15153A}
+.chip.c1{background:var(--pink)}.chip.c2{background:var(--sky)}.chip.c3{background:var(--mint)}.chip.c4{background:var(--yellow)}
+.note{margin-top:12px;color:var(--muted);font-size:1rem}
+
+/* form */
+.signup{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;background:var(--indigo);color:var(--on-indigo);border-radius:28px;padding:40px 32px}
+@media(max-width:820px){.signup{grid-template-columns:1fr;padding:32px 22px}}
+.signup h2{color:var(--on-indigo)}
+.signup p{opacity:.88;max-width:40ch}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:1rem}
+input,select{font:400 1.05rem var(--body);padding:13px 14px;border-radius:12px;border:2px solid transparent;background:#FFFFFF;color:#15153A;width:100%}
+input:focus-visible,select:focus-visible{outline:3px solid var(--yellow)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+form .btn{background:var(--yellow);border-color:var(--yellow);color:#15153A;justify-self:start}
+#msg{min-height:1.6em;font-weight:700}
+
+footer{padding:56px 0 32px;color:var(--muted);font-size:.95rem}
+footer a{text-underline-offset:3px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);z-index:5}
+.bar a{flex:1;text-align:center;padding:14px;border-radius:12px;font-weight:700;text-decoration:none}
+.bar .call{background:var(--surface);border:2px solid var(--ink);color:var(--ink)}
+.bar .enroll{background:var(--indigo);color:var(--on-indigo)}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top">Bright Steps</a>
+    <nav aria-label="Main"><a href="#courses">Courses</a><a href="#teachers">Teachers</a><a href="#schedule">Schedule</a><a href="#enroll">Free trial</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Small groups. Clear progress. Kids who want to come back.</h1>
+        <p>English, Math and Python for ages 7 to 17. Groups of up to 10 students, and a short progress report for parents every month.</p>
+        <div class="actions">
+          <a class="btn solid" href="#enroll">Book a free trial lesson</a>
+          <a class="btn" href="#courses">See courses</a>
+        </div>
+      </div>
+      <div class="report" role="img" aria-label="Example of a monthly progress report">
+        <h3>Monthly progress report</h3>
+        <small>Student: Aziz, Kids English</small>
+        <div class="rep-row"><span>Speaking</span><span>4/5</span></div><div class="rep-bar"><i style="width:80%"></i></div>
+        <div class="rep-row"><span>Vocabulary</span><span>5/5</span></div><div class="rep-bar"><i style="width:100%"></i></div>
+        <div class="rep-row"><span>Homework</span><span>3/5</span></div><div class="rep-bar"><i style="width:60%"></i></div>
+        <p>Teacher’s note: confident in class. Let’s practice short stories at home.</p>
+      </div>
+    </div>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <p class="lead">Every course starts with a free trial lesson, so your child can try before you decide.</p>
+      <div class="courses">
+        <article class="course c1">
+          <span class="top">Ages 7 to 11</span>
+          <h3>Kids English</h3>
+          <p>Speaking games, songs and stories that build a first real vocabulary.</p>
+          <ul class="facts"><li>3 lessons a week, 60 minutes</li><li>Up to 8 students</li><li>Monthly report for parents</li></ul>
+          <div class="foot"><span class="price">400 000 <small>UZS / month</small></span><button class="btn" data-course="Kids English">Choose course</button></div>
+        </article>
+        <article class="course c2">
+          <span class="top">Ages 14 and up</span>
+          <h3>English B1 to B2 and IELTS</h3>
+          <p>Grammar, speaking and exam practice for school, university and certificates.</p>
+          <ul class="facts"><li>3 lessons a week, 90 minutes</li><li>Mock tests every month</li><li>Up to 8 students</li></ul>
+          <div class="foot"><span class="price">500 000 <small>UZS / month</small></span><button class="btn" data-course="English B1-B2 and IELTS">Choose course</button></div>
+        </article>
+        <article class="course c3">
+          <span class="top">Ages 10 to 14</span>
+          <h3>Math Foundations</h3>
+          <p>Fractions, equations and logic puzzles, explained step by step until it clicks.</p>
+          <ul class="facts"><li>2 lessons a week, 90 minutes</li><li>Homework help sessions</li><li>Up to 8 students</li></ul>
+          <div class="foot"><span class="price">400 000 <small>UZS / month</small></span><button class="btn" data-course="Math Foundations">Choose course</button></div>
+        </article>
+        <article class="course c4">
+          <span class="top">Ages 13 to 17</span>
+          <h3>Python for Teens</h3>
+          <p>Learn to code by building small games and a Telegram bot of your own.</p>
+          <ul class="facts"><li>4 lessons a week, 90 minutes</li><li>Laptop required</li><li>Up to 8 students</li></ul>
+          <div class="foot"><span class="price">450 000 <small>UZS / month</small></span><button class="btn" data-course="Python for Teens">Choose course</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="teachers">
+      <h2>Your teachers</h2>
+      <p class="lead">Patient, prepared and friendly with students and parents.</p>
+      <div class="teachers">
+        <div class="teacher"><div class="av" style="background:var(--pink)">DK</div><div><h3>Ms. Dilnoza</h3><p>Kids English and IELTS. Certified teacher with years of classroom experience.</p></div></div>
+        <div class="teacher"><div class="av" style="background:var(--mint)">JA</div><div><h3>Mr. Jasur</h3><p>Math Foundations. Turns difficult topics into small, clear steps.</p></div></div>
+        <div class="teacher"><div class="av" style="background:var(--sky)">SR</div><div><h3>Mr. Sardor</h3><p>Python for Teens. Software developer who teaches by building real projects.</p></div></div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <h2>Weekly schedule</h2>
+      <p class="lead">Lessons are in the afternoon, after school. Swipe sideways on a phone to see every day.</p>
+      <div class="tt-wrap" tabindex="0" role="region" aria-label="Weekly timetable, scrollable">
+        <table class="tt">
+          <thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead>
+          <tbody>
+            <tr><td>16:00</td><td><span class="chip c1">Kids English</span></td><td><span class="chip c3">Math</span></td><td><span class="chip c1">Kids English</span></td><td><span class="chip c3">Math</span></td><td><span class="chip c1">Kids English</span></td><td>–</td></tr>
+            <tr><td>17:30</td><td><span class="chip c2">IELTS</span></td><td><span class="chip c4">Python</span></td><td><span class="chip c2">IELTS</span></td><td><span class="chip c4">Python</span></td><td><span class="chip c2">IELTS</span></td><td>–</td></tr>
+            <tr><td>10:00</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td><span class="chip c4">Free trial</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Saturday at 10:00 is the open trial lesson for new students. Call us if you need a different time.</p>
+    </section>
+
+    <section id="enroll">
+      <div class="signup">
+        <div>
+          <h2>Book a free trial lesson</h2>
+          <p>Leave your details and we will call you within one working day to choose a time. No payment is needed for the trial.</p>
+        </div>
+        <form id="lead" novalidate>
+          <label>Parent’s name<input name="parent" required autocomplete="name"></label>
+          <label>Phone number<input name="phone" type="tel" required placeholder="+998 90 000 00 00" autocomplete="tel"></label>
+          <div class="row2">
+            <label>Child’s age<input name="age" type="number" min="6" max="18" required></label>
+            <label>Course<select name="course" id="course" required>
+              <option value="">Choose a course</option>
+              <option>Kids English</option><option>English B1-B2 and IELTS</option>
+              <option>Math Foundations</option><option>Python for Teens</option>
+            </select></label>
+          </div>
+          <button class="btn" type="submit">Send request</button>
+          <p id="msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>12 Example Street, Tashkent. Phone: <a href="tel:+998900000000">+998 90 000 00 00</a>. Open from Monday to Saturday.</p>
+    <p style="margin-top:8px">Bright Steps is a demo website. Designed in Figma, built with HTML, CSS and a little JavaScript by <a href="https://github.com/soktamov581-math" target="_blank"> <span> shakhzod_coder </span> </a>.</p>
+  </footer>
+</div>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="call" href="tel:+998900000000">Call us</a>
+  <a class="enroll" href="#enroll">Free trial</a>
+</nav>
+
+<script>
+// 1. Paste your Formspree form URL here to receive requests by email (free plan available).
+const ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+const form = document.getElementById('lead');
+const msg = document.getElementById('msg');
+const select = document.getElementById('course');
+
+// "Choose course" buttons pre-select the course in the form
+document.querySelectorAll('[data-course]').forEach(b => b.addEventListener('click', () => {
+  select.value = b.dataset.course;
+  document.getElementById('enroll').scrollIntoView({behavior: 'smooth'});
+  form.parent.focus({preventScroll: true});
+}));
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  if (ENDPOINT.includes('YOUR_FORM_ID')) {
+    msg.textContent = 'Demo mode: this website is an example.';
+    return;
+  }
+  msg.textContent = 'Sending…';
+  try {
+    const r = await fetch(ENDPOINT, {method: 'POST', body: new FormData(form), headers: {Accept: 'application/json'}});
+    if (!r.ok) throw new Error();
+    form.reset();
+    msg.textContent = 'Thank you! We will call you within one working day.';
+  } catch (err) {
+    msg.textContent = 'Could not send the request. Please call us at +998 90 000 00 00.';
+  }
+});
+</script>
+</body>
+</html>
